@@ -1,6 +1,7 @@
 // Imports
 import React from "react";
 import "./form-input.styles.scss";
+
 // Functional Component
 const FormInput = ({ handleChange, label, ...otherProps }) => (
   <div className="group">
