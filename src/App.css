@@ -1,6 +1,11 @@
-body {
+body,
+html {
   font-family: "Open Sans Condensed";
   background-color: #ffffff;
   padding: 20px 60px;
   scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
 }

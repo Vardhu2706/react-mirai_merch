@@ -3,34 +3,37 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   align-items: center;
   .logo-container {
     height: 100%;
     outline: none;
-    width: 200px;
-    padding-left: 15px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-right: 25px;
+    width: 380px;
+    // padding-left: 15px;
+    font-size: 20px;
+    // padding-top: 25px;
+    // padding-bottom: 25px;
+    // padding-right: 25px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    text-align: left;
     font-family: "Pacifico", cursive;
     text-decoration: none;
     color: #000;
   }
   .options {
     width: 50%;
+    font-size: 20px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     .option {
       outline: none;
+      cursor: pointer;
       text-decoration: underline;
       color: #000;
-      padding: 10px 15px;
+      padding-left: 15px;
     }
   }
 }

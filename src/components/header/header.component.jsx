@@ -2,8 +2,9 @@
 import React from "react";
 import "./header.styles.scss";
 import { Link } from "react-router-dom";
+import { auth } from "../../firebase/firebase.utils";
 // Functional Component
-const Header = () => (
+const Header = ({ currentUser }) => (
   // TO-DO : Add Search Box
   // Add Search Feature
   <div className="header">
@@ -20,9 +21,15 @@ const Header = () => (
       <Link className="option" to="/contact">
         CONTACT
       </Link>
-      <Link className="option" to="/login">
-        LOGIN
-      </Link>
+      {currentUser ? (
+        <div className="option" onClick={() => auth.signOut()}>
+          SIGN OUT
+        </div>
+      ) : (
+        <Link className="option" to="/login">
+          SIGN IN
+        </Link>
+      )}
     </div>
   </div>
 );
