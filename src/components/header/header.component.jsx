@@ -4,8 +4,10 @@ import "./header.styles.scss";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase/firebase.utils";
 import { connect } from "react-redux";
+import CartIcon from "../cart-icon/cart-icon.component";
+import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 // Functional Component
-const Header = ({ currentUser }) => (
+const Header = ({ currentUser, hidden }) => (
   // TO-DO : Add Search Box
   // Add Search Feature
   <div className="header">
@@ -31,13 +33,16 @@ const Header = ({ currentUser }) => (
           SIGN IN
         </Link>
       )}
+      <CartIcon />
     </div>
+    {hidden ? null : <CartDropdown />}
   </div>
 );
-const mapStateToProps = (state) => ({
-  currentUser : state.user.currentUser
-})
-// Export 
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+  currentUser,
+  hidden,
+});
+// Export
 export default connect(mapStateToProps)(Header);
 /* 
   The connect() function connects a React component to a Redux Store.
