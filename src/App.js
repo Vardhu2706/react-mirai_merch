@@ -11,8 +11,8 @@ import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 // Class Component
 class App extends React.Component {
   // Constructor
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       currentUser: null,
     };

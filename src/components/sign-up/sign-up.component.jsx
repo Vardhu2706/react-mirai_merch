@@ -4,7 +4,7 @@ import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button-component/custom-button.component";
 import { auth, createUserProfileDocument } from "../../firebase/firebase.utils";
 import "./sign-up.styles.scss";
-
+// Class Component
 class SignUp extends React.Component {
   constructor() {
     super();
@@ -15,6 +15,7 @@ class SignUp extends React.Component {
       confirmPassword: "",
     };
   }
+  // Handling Form Submit
   handleSubmit = async (event) => {
     event.preventDefault();
     const { displayName, email, password, confirmPassword } = this.state;
@@ -38,16 +39,18 @@ class SignUp extends React.Component {
       console.error(error);
     }
   };
+  // Handling Change
   handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
   };
+  // Render Method
   render() {
     const { displayName, email, password, confirmPassword } = this.state;
     return (
       <div className="sign-up">
-        <h2 className="title">I do not have a account</h2>
-        <span>Sign up with your email and password</span>
+        <h2 className="title">I do not have an account</h2>
+        <span>Sign up with your email and password.</span>
         <form className="sign-up-form" onSubmit={this.handleSubmit}>
           <FormInput
             type="text"
@@ -87,5 +90,5 @@ class SignUp extends React.Component {
     );
   }
 }
-
+// Export
 export default SignUp;
