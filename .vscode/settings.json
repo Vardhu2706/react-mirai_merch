@@ -4,7 +4,11 @@
         "Mirai",
         "firebaseapp",
         "firestore",
+        "initial",
+        "middlewares",
         "preconnect",
+        "state",
+        "unregistering",
         "webfonts"
     ],
     "cSpell.ignoreWords": [
@@ -17,10 +21,12 @@
         "ge",
         "gh",
         "hoxe",
+        "initial",
         "iza",
         "nk",
         "rwwz",
         "s",
+        "state",
         "sy",
         "ut",
         "vy"
