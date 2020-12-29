@@ -6,6 +6,7 @@ import { auth } from "../../firebase/firebase.utils";
 import { connect } from "react-redux";
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
+// import SearchBox from "../search-box/search-box.component";
 // Functional Component
 const Header = ({ currentUser, hidden }) => (
   // TO-DO : Add Search Box
@@ -14,9 +15,7 @@ const Header = ({ currentUser, hidden }) => (
     <Link className="logo-container" to="/">
       <h1>Mirai Merch</h1>
     </Link>
-    {/* <div className='search-box'>
-      <input />
-    </div> */}
+    {/* <SearchBox /> */}
     <div className="options">
       <Link className="option" to="/shop">
         SHOP
