@@ -6,8 +6,11 @@
         "firestore",
         "initial",
         "middlewares",
+        "persist",
+        "persistor",
         "preconnect",
         "state",
+        "strore",
         "unregistering",
         "webfonts"
     ],
