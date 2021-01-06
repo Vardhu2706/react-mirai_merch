@@ -17,6 +17,10 @@ import logger from "redux-logger";
 import rootReducer from "./root-reducer";
 import { persistStore } from "redux-persist";
 //
-const middlewares = [logger];
+const middlewares = [];
+// Check if app is on production or not and then add LOGGER to MIDDLEWARE.
+if (process.env.NODE_ENV === "development") {
+  middlewares.push(logger);
+}
 export const store = createStore(rootReducer, applyMiddleware(...middlewares));
 export const persistor = persistStore(store);
